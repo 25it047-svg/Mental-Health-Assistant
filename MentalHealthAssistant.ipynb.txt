@@ -1,0 +1,54 @@
+import pandas as pd
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.neighbors import KNeighborsClassifier
+
+# Dataset
+data = {
+    "emotion": [
+        "stressed",
+        "sad",
+        "happy",
+        "anxious",
+        "tired",
+        "excited",
+        "depressed",
+        "relaxed"
+    ],
+    
+    "suggestion": [
+        "Take a short break and practice deep breathing.",
+        "Talk to a friend or family member.",
+        "Keep enjoying your positive activities.",
+        "Try meditation and relaxation exercises.",
+        "Get proper rest and sleep.",
+        "Channel your energy into productive activities.",
+        "Consider speaking with a counselor.",
+        "Maintain your healthy routine."
+    ]
+}
+
+df = pd.DataFrame(data)
+
+# Features and Labels
+X = df["emotion"]
+y = df["suggestion"]
+
+# Text Vectorization
+vectorizer = TfidfVectorizer()
+X_vectorized = vectorizer.fit_transform(X)
+
+# Train KNN Model
+model = KNeighborsClassifier(n_neighbors=1)
+model.fit(X_vectorized, y)
+
+print("Mental Health Assistant Model Trained Successfully!")
+
+# User Input
+user_input = input("Enter your feeling: ")
+
+# Prediction
+user_vector = vectorizer.transform([user_input])
+prediction = model.predict(user_vector)
+
+print("\nSuggested Advice:")
+print(prediction[0])

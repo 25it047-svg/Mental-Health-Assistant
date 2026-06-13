@@ -10,13 +10,11 @@ Project Name:Mental Health Assistant Using Machine Learning
 
 No. of Weeks: 6 Weeks
 
----
 
 ## Project Scope
 
 The Mental Health Assistant is a Machine Learning-based application that identifies a user's emotional state from text input and provides supportive suggestions for improving mental well-being. The project demonstrates the use of Natural Language Processing (NLP) and Machine Learning techniques to create a simple emotional support system.
 
----
 
 ## Objectives
 
@@ -25,7 +23,6 @@ The Mental Health Assistant is a Machine Learning-based application that identif
 - To demonstrate the practical application of Machine Learning.
 - To create a beginner-friendly AI-based assistant.
 
----
 
 ## Technologies Used
 
@@ -36,7 +33,6 @@ The Mental Health Assistant is a Machine Learning-based application that identif
 - K-Nearest Neighbors (KNN)
 - Google Colab
 
----
 
 ## Features
 
@@ -46,7 +42,6 @@ The Mental Health Assistant is a Machine Learning-based application that identif
 - Machine Learning-Based Prediction
 - Simple and Easy-to-Use Interface
 
----
 
 ## Project Workflow
 
@@ -57,6 +52,19 @@ The Mental Health Assistant is a Machine Learning-based application that identif
 5. Predict the appropriate response.
 6. Display supportive mental health advice.
 
----
 
-## Sample Input
+## Sample Inputs
+- stressed
+- sad
+- happy
+- anxious
+- tired
+
+## Future Enhancements
+- Voice input support
+- Chatbot integration
+- Mobile application
+- Advanced NLP models
+
+## Output
+The system predicts the emotional state and provides a helpful suggestion to improve mental well-being.
